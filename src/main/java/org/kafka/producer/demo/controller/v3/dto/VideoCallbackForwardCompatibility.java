@@ -5,10 +5,10 @@ import org.kafka.producer.demo.controller.VideoCallback;
 
 public class VideoCallbackForwardCompatibility extends VideoCallback {
 
-    @JsonProperty(required = true, value = "contact_info")
+    @JsonProperty(value = "contact_info")
     public String contactInfo;
 
-    @JsonProperty(required = true, value = "modality")
+    @JsonProperty(value = "modality")
     public String modality;
 
     public VideoCallbackForwardCompatibility(String status, String contactInfo, String modality) {

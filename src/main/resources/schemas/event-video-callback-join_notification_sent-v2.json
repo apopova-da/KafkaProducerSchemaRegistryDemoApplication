@@ -3,15 +3,28 @@
   "additionalProperties": false,
   "properties": {
     "contact_info": {
-      "type": "string"
+      "oneOf": [
+        {
+          "title": "Not included",
+          "type": "null"
+        },
+        {
+          "type": "string"
+        }
+      ]
     },
     "ehr_id": {
-      "type": "string"
+      "oneOf": [
+        {
+          "title": "Not included",
+          "type": "null"
+        },
+        {
+          "type": "string"
+        }
+      ]
     },
     "modality": {
-      "type": "string"
-    },
-    "status": {
       "oneOf": [
         {
           "title": "Not included",
@@ -54,13 +67,19 @@
           "type": "string"
         }
       ]
+    },
+    "status": {
+      "oneOf": [
+        {
+          "title": "Not included",
+          "type": "null"
+        },
+        {
+          "type": "string"
+        }
+      ]
     }
   },
-  "required": [
-    "contact_info",
-    "ehr_id",
-    "modality"
-  ],
-  "title": "Video Callback V 1",
+  "title": "Video Callback Backward Compatibility",
   "type": "object"
 }

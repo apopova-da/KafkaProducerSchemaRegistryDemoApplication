@@ -8,16 +8,12 @@ public class VideoCallbackV4 extends VideoCallback {
     @JsonProperty(required = true, value = "contact_info")
     public String contactInfo;
 
-    @JsonProperty(required = true, value = "ehr_id")
-    public Integer ehrId;
-
     @JsonProperty(required = true, value = "modality")
-    public String modality;
+    public Integer modality;
 
-    public VideoCallbackV4(String status, String contactInfo, Integer ehrId, String modality) {
+    public VideoCallbackV4(String status, String contactInfo, Integer modality) {
         super(status);
         this.contactInfo = contactInfo;
-        this.ehrId = ehrId;
         this.modality = modality;
     }
 
@@ -26,8 +22,7 @@ public class VideoCallbackV4 extends VideoCallback {
         return "VideoCallbackV4{" +
             "status='" + status + '\'' +
             ", contactInfo='" + contactInfo + '\'' +
-            ", ehrId=" + ehrId +
-            ", modality='" + modality + '\'' +
+            ", modality=" + modality +
             '}';
     }
 }
