@@ -1,7 +1,7 @@
 package org.kafka.producer.demo.controller.v3;
 
 import org.kafka.producer.demo.VideoCallbackEventProducer;
-import org.kafka.producer.demo.controller.v3.dto.VideoCallbackV3;
+import org.kafka.producer.demo.controller.v3.dto.VideoCallbackForwardCompatibility;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,7 +18,7 @@ public class VideoCallbackEventControllerV3 {
     }
 
     @PostMapping
-    public String create(@RequestBody VideoCallbackV3 event) {
+    public String create(@RequestBody VideoCallbackForwardCompatibility event) {
         videoCallbackEventProducer.send(event);
         return "OK";
     }

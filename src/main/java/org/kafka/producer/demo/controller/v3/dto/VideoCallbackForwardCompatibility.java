@@ -1,32 +1,27 @@
-package org.kafka.producer.demo.controller.v1.dto;
+package org.kafka.producer.demo.controller.v3.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import org.kafka.producer.demo.controller.VideoCallback;
 
-public class VideoCallbackV1 extends VideoCallback {
+public class VideoCallbackForwardCompatibility extends VideoCallback {
 
     @JsonProperty(required = true, value = "contact_info")
     public String contactInfo;
 
-    @JsonProperty(required = true, value = "ehr_id")
-    public String ehrId;
-
     @JsonProperty(required = true, value = "modality")
     public String modality;
 
-    public VideoCallbackV1(String status, String contactInfo, String ehrId, String modality) {
+    public VideoCallbackForwardCompatibility(String status, String contactInfo, String modality) {
         super(status);
         this.contactInfo = contactInfo;
-        this.ehrId = ehrId;
         this.modality = modality;
     }
 
     @Override
     public String toString() {
-        return "VideoCallbackV1{" +
+        return "VideoCallbackForwardCompatibility{" +
             "status='" + status + '\'' +
             ", contactInfo='" + contactInfo + '\'' +
-            ", ehrId='" + ehrId + '\'' +
             ", modality='" + modality + '\'' +
             '}';
     }

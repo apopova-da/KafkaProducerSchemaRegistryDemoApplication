@@ -21,6 +21,39 @@
           "type": "string"
         }
       ]
+    },
+    "participant_source_id": {
+      "oneOf": [
+        {
+          "title": "Not included",
+          "type": "null"
+        },
+        {
+          "type": "string"
+        }
+      ]
+    },
+    "patient_id": {
+      "oneOf": [
+        {
+          "title": "Not included",
+          "type": "null"
+        },
+        {
+          "type": "string"
+        }
+      ]
+    },
+    "room_source_id": {
+      "oneOf": [
+        {
+          "title": "Not included",
+          "type": "null"
+        },
+        {
+          "type": "string"
+        }
+      ]
     }
   },
   "required": [

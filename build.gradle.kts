@@ -26,13 +26,8 @@ dependencies {
 
     // Spring
     implementation("org.springframework.boot:spring-boot-starter-web")
-    implementation("org.apache.kafka:kafka-streams")
-    implementation(platform("org.springframework.cloud:spring-cloud-dependencies:$springCloudVersion"))
-    implementation("org.springframework.cloud:spring-cloud-stream")
-    implementation("org.springframework.cloud:spring-cloud-stream-binder-kafka")
-    implementation("org.springframework.cloud:spring-cloud-stream-binder-kafka-streams")
     implementation("org.springframework.kafka:spring-kafka")
-    //implementation("org.springframework.cloud:spring-cloud-schema-registry-client")
+    implementation(platform("org.springframework.cloud:spring-cloud-dependencies:$springCloudVersion"))
     implementation("io.confluent:kafka-json-schema-serializer:7.0.1")
 }
 

@@ -3,7 +3,7 @@ package org.kafka.producer.demo.controller.v2.dto;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import org.kafka.producer.demo.controller.VideoCallback;
 
-public class VideoCallbackV2 extends VideoCallback {
+public class VideoCallbackBackwardCompatibility extends VideoCallback {
 
     @JsonProperty("contact_info")
     public String contactInfo;
@@ -23,7 +23,7 @@ public class VideoCallbackV2 extends VideoCallback {
     @JsonProperty("room_source_id")
     public String roomSourceId;
 
-    public VideoCallbackV2(
+    public VideoCallbackBackwardCompatibility(
         String status,
         String contactInfo,
         String ehrId,
@@ -43,7 +43,7 @@ public class VideoCallbackV2 extends VideoCallback {
 
     @Override
     public String toString() {
-        return "VideoCallback{" +
+        return "VideoCallbackBackwardCompatibility{" +
             "status='" + status + '\'' +
             ", contactInfo='" + contactInfo + '\'' +
             ", ehrId='" + ehrId + '\'' +
